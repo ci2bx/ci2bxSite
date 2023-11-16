@@ -1,17 +1,38 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-<meta charset= "utf-8" />
-<title> Introduction au HTML </title>
+  <title>Charles</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- Font/Style -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/b93a0009b7.js" crossorigin="anonymous">
+
+  </script>
+  <link href="/favicon.png" rel="shortcut icon" />
+  <script src="script.js">
+
+  </script>
 </head>
-<body>
-<h1> Le HTML </h1>
-Le <b> HTML </b> est un langage informatique utilisé pour créer des pages
-Web sur Internet. Il sert à décrire le contenu des pages Web. HTML signifie
-<i> HyperText Markup Language </i>, c’est-à-dire de <b> balisage
-hypertexte </b>. <br/>
-Comme nous le verrons, ce langage utilise des <b> balises </b>. Les balises
-permettent de mettre en forme le texte, insérer des images, des liens, etc.
+
+<body id=body>
+  <h1>
+    <bienvenue id="hello" onclick="changetext()">Bienvenue</bienvenue> sur le <a href="apropo" class=souligne_pas_brdldm id=rick>site</a> de Charles.
+    <adroite id="theme">
+      <span style="cursor: pointer;" class="material-icons" onclick="changetheme()" id="changetheme" class="dark_mode">
+        light_mode
+      </span>
+    </adroite>
+  </h1>
+  <hr>
+  <p>Ce site a l'air très vide. <br>
+    Mais je vous laisse mon insta.</p>
+  <a id=insta href="https://www.instagram.com/c.i2b_">
+    <i class="fab fa-instagram"></i><span> @c.i2b_ </span><i class="fas fa-link"></i></a>
+
+
 </body>
+
 </html>
