@@ -38,6 +38,10 @@ toutenbas {
   text-decoration: none;
 }
 
+#rick {
+  text-decoration: none;
+}
+
 @keyframes arcenciel {
   from{color: white;}
   25% {color: red;}

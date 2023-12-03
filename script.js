@@ -21,12 +21,14 @@ function changetheme() {
     document.getElementById("insta").className = "insta-light"
     document.getElementById("changetheme").innerHTML = "dark_mode"
     document.getElementById("theme").className = "light_mode"
+    document.getElementById("rick").className = "light"
   } else {  //dark
     document.getElementById("body").className = ""
     document.getElementById("insta").className = "insta"
     document.getElementById("changetheme").innerHTML = "light_mode"
     document.getElementById("theme").className = "dark_mode"
     document.getElementById("hello").className = "dark_mode"
+    document.getElementById("rick").className = "dark_mode"
   }
 }
 
