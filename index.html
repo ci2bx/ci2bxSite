@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#home" class="active">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="container" id="home">
+      <img src="images/pp.JPG" width="200" class="image-principale" />
+      <h1>Charles Issert de Braux</h1>
+      <p>Bienvenue sur mon site de présentation !</p>
+    </div>
+    <div class="container" id="about">
+      <h1>À propos</h1>
+      <p>
+        Je suis un lycéen passioné de développement,<br />
+        de photographie et de sport automobile.
+      </p>
+    </div>
+    <div class="container" id="projects">
+      <h1>Projets</h1>
+      <p>Texte d'exemple pour la page des projets.</p>
+    </div>
+    <div class="container" id="contact">
+      <h1>Contact</h1>
+      <p>
+        Mail:
+        <a href="mailto:charles.issert2braux@gmail.com" class="lien"
+          >charles.issert2braux@gmail.com</a>
+        <br />GitHub: <a href="https://github.com/ci2bx" class="lien">@ci2bx</a>
+      </p>
+    </div>
+    <script>
+      const sections = document.querySelectorAll(".container");
+      const navLinks = document.querySelectorAll(".navbar a");
 
-<head>
-  <title>Charles</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <!-- Font/Style -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="https://kit.fontawesome.com/b93a0009b7.js" crossorigin="anonymous">
+      window.addEventListener("scroll", () => {
+        let current = "";
 
-  </script>
-  <link href="/favicon.png" rel="shortcut icon" />
-  <script src="script.js">
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute("id");
+          }
+        });
 
-  </script>
-</head>
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+          }
+        });
+      });
 
-<body id=body>
-  <h1>
-    <bienvenue id="hello" onclick="changetext()">Bienvenue</bienvenue> sur le <a href="apropo" class=souligne_pas_brdldm id=rick>site</a> de Charles.
-    <adroite id="theme">
-      <span style="cursor: pointer;" class="material-icons" onclick="changetheme()" id="changetheme" class="dark_mode">
-        light_mode
-      </span>
-    </adroite>
-  </h1>
-  <hr>
-  <p>Ce site est en construction. <br>
-    Mais je vous laisse mon insta.</p>
-  <a id=insta href="https://www.instagram.com/c.idb_">
-    <i class="fab fa-instagram"></i><span> @c.idb_ </span><i class="fas fa-link"></i></a>
-
-    <h2><a href="https://snt.i2b.fr/">Voir mon magifique site sur les Y13</a></h2>
-
-
-</body>
-
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>
